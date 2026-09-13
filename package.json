@@ -1,0 +1,39 @@
+{
+  "name": "turnspeedcl",
+  "version": "1.0.7",
+  "description": "Headful browser lib that solves Cloudflare Turnstile challenges via puppeteer-real-browser and hands back the CF clearance cookies (cf_clearance, __cf_bm, cf_chl_rc_*).",
+  "main": "index.js",
+  "types": "typings.d.ts",
+  "files": [
+    "index.js",
+    "src",
+    "scripts",
+    "typings.d.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "postinstall": "node -e \"try {require('./scripts/install-chrome.js')} catch(e) {console.log('Chrome install skipped:', e.message)}\"",
+    "test": "node examples/basic.js",
+    "clean": "node -e \"require('fs').rmSync('node_modules', { recursive: true, force: true })\""
+  },
+  "keywords": [
+    "cloudflare",
+    "turnstile",
+    "challenge",
+    "cf-bypass",
+    "cf_clearance",
+    "puppeteer-real-browser",
+    "scraping",
+    "cookies"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@puppeteer/browsers": "^2.6.1",
+    "puppeteer-real-browser": "^1.4.4"
+  }
+}

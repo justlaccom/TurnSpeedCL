@@ -1,0 +1,5 @@
+.chrome-local/
+node_modules/
+examples/
+*.log
+.env
